@@ -1,6 +1,6 @@
-# Rockaway Summer House
+# Bhante Suddhāso
 
-The repository for https://rockawaysummerhouse.com/.
+The repository for https://bhantesuddhaso.com/.
 
 - Content managed via [Local WP](https://localwp.com/).
 - Static file output to [docs](docs).
