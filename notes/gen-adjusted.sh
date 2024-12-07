@@ -4,7 +4,7 @@ set -eu
 cd "$(dirname "$0")"
 
 IMPORT_SQL=giovanna_wp366.sql
-IMPORT_PREFIX=wpqu
+IMPORT_PREFIX=wpqu_
 
 lando destroy -y
 
@@ -53,6 +53,7 @@ cat <<EOF | lando exec database -- mysql -u root lamp
     guid = REPLACE(guid, 'http://bhantesuddhaso.com/', 'https://bhantesuddhaso.lndo.site/');
   UPDATE wp_posts SET
     guid = REPLACE(guid, 'https://bhantesuddhaso.com/', 'https://bhantesuddhaso.lndo.site/');
+  UPDATE wp_posts SET
     post_content = REPLACE(post_content, 'http://bhantesuddhaso.com/', '/');
   UPDATE wp_posts SET
     post_content = REPLACE(post_content, 'https://bhantesuddhaso.com/', '/');
